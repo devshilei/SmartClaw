@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500">
+  <!-- Background with cyber grid -->
+  <defs>
+    <pattern id="cyberGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="20" y2="0" stroke="rgba(0,255,255,0.1)" stroke-width="0.5"/>
+      <line x1="0" y1="0" x2="0" y2="20" stroke="rgba(0,255,255,0.1)" stroke-width="0.5"/>
+    </pattern>
+    <linearGradient id="bodyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff00ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00ffff;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <radialGradient id="eyeGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ffff00;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff8c00;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="500" height="500" fill="#0a0a0a"/>
+  <rect width="500" height="500" fill="url(#cyberGrid)"/>
+
+  <!-- Glowing neon lines -->
+  <line x1="50" y1="100" x2="450" y2="100" stroke="#ff00ff" stroke-width="2" filter="url(#glow)" opacity="0.7"/>
+  <line x1="50" y1="400" x2="450" y2="400" stroke="#00ffff" stroke-width="2" filter="url(#glow)" opacity="0.7"/>
+  <line x1="100" y1="50" x2="100" y2="450" stroke="#ff00ff" stroke-width="2" filter="url(#glow)" opacity="0.7"/>
+  <line x1="400" y1="50" x2="400" y2="450" stroke="#00ffff" stroke-width="2" filter="url(#glow)" opacity="0.7"/>
+
+  <!-- Lobster body -->
+  <ellipse cx="250" cy="250" rx="80" ry="120" fill="url(#bodyGradient)" filter="url(#glow)"/>
+  <ellipse cx="250" cy="250" rx="70" ry="110" fill="#1a1a2e" stroke="#ff00ff" stroke-width="3" filter="url(#glow)"/>
+
+  <!-- Mechanical segments -->
+  <circle cx="250" cy="180" r="20" fill="#0f3460" stroke="#00ffff" stroke-width="2" filter="url(#glow)"/>
+  <circle cx="250" cy="220" r="20" fill="#0f3460" stroke="#00ffff" stroke-width="2" filter="url(#glow)"/>
+  <circle cx="250" cy="260" r="20" fill="#0f3460" stroke="#00ffff" stroke-width="2" filter="url(#glow)"/>
+  <circle cx="250" cy="300" r="20" fill="#0f3460" stroke="#00ffff" stroke-width="2" filter="url(#glow)"/>
+
+  <!-- Eyes -->
+  <circle cx="200" cy="220" r="15" fill="#000" stroke="#ff00ff" stroke-width="2" filter="url(#glow)"/>
+  <circle cx="200" cy="220" r="10" fill="url(#eyeGradient)" filter="url(#glow)"/>
+  <circle cx="300" cy="220" r="15" fill="#000" stroke="#ff00ff" stroke-width="2" filter="url(#glow)"/>
+  <circle cx="300" cy="220" r="10" fill="url(#eyeGradient)" filter="url(#glow)"/>
+  <circle cx="195" cy="215" r="3" fill="#fff"/>
+  <circle cx="295" cy="215" r="3" fill="#fff"/>
+
+  <!-- Antennae -->
+  <path d="M200 200 Q180 150 160 120" stroke="#00ffff" stroke-width="3" fill="none" filter="url(#glow)"/>
+  <path d="M300 200 Q320 150 340 120" stroke="#00ffff" stroke-width="3" fill="none" filter="url(#glow)"/>
+  <circle cx="160" cy="120" r="5" fill="#00ffff" filter="url(#glow)"/>
+  <circle cx="340" cy="120" r="5" fill="#00ffff" filter="url(#glow)"/>
+
+  <!-- Claws -->
+  <!-- Left claw -->
+  <path d="M150 250 Q120 270 100 300 Q110 330 130 350 Q150 340 170 320 Z" fill="#1a1a2e" stroke="#ff00ff" stroke-width="3" filter="url(#glow)"/>
+  <path d="M150 250 Q140 280 130 300 Q125 315 130 330 Q140 340 150 335 Z" fill="url(#bodyGradient)" filter="url(#glow)"/>
+  <circle cx="125" cy="310" r="8" fill="#ff00ff" filter="url(#glow)"/>
+  
+  <!-- Right claw -->
+  <path d="M350 250 Q380 270 400 300 Q390 330 370 350 Q350 340 330 320 Z" fill="#1a1a2e" stroke="#00ffff" stroke-width="3" filter="url(#glow)"/>
+  <path d="M350 250 Q360 280 370 300 Q375 315 370 330 Q360 340 350 335 Z" fill="url(#bodyGradient)" filter="url(#glow)"/>
+  <circle cx="375" cy="310" r="8" fill="#00ffff" filter="url(#glow)"/>
+
+  <!-- Legs -->
+  <!-- Left legs -->
+  <path d="M180 280 Q160 300 150 330" stroke="#ff00ff" stroke-width="3" fill="none" filter="url(#glow)"/>
+  <path d="M180 310 Q165 330 155 360" stroke="#ff00ff" stroke-width="3" fill="none" filter="url(#glow)"/>
+  <path d="M180 340 Q170 360 160 390" stroke="#ff00ff" stroke-width="3" fill="none" filter="url(#glow)"/>
+  
+  <!-- Right legs -->
+  <path d="M320 280 Q340 300 350 330" stroke="#00ffff" stroke-width="3" fill="none" filter="url(#glow)"/>
+  <path d="M320 310 Q335 330 345 360" stroke="#00ffff" stroke-width="3" fill="none" filter="url(#glow)"/>
+  <path d="M320 340 Q330 360 340 390" stroke="#00ffff" stroke-width="3" fill="none" filter="url(#glow)"/>
+
+  <!-- Cyber details -->
+  <rect x="230" y="160" width="40" height="10" fill="#000" stroke="#ffff00" stroke-width="1" filter="url(#glow)"/>
+  <rect x="235" y="180" width="30" height="8" fill="#000" stroke="#ffff00" stroke-width="1" filter="url(#glow)"/>
+  <rect x="230" y="200" width="40" height="10" fill="#000" stroke="#ffff00" stroke-width="1" filter="url(#glow)"/>
+  <rect x="235" y="220" width="30" height="8" fill="#000" stroke="#ffff00" stroke-width="1" filter="url(#glow)"/>
+
+  <!-- Circuit lines -->
+  <path d="M220 240 Q230 250 220 260" stroke="#ffff00" stroke-width="1" fill="none" filter="url(#glow)"/>
+  <path d="M280 240 Q270 250 280 260" stroke="#ffff00" stroke-width="1" fill="none" filter="url(#glow)"/>
+  <circle cx="220" cy="250" r="2" fill="#ffff00" filter="url(#glow)"/>
+  <circle cx="280" cy="250" r="2" fill="#ffff00" filter="url(#glow)"/>
+
+  <!-- Text - optional -->
+  <text x="250" y="450" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#00ffff" text-anchor="middle" filter="url(#glow)">SMARTCLAW</text>
+</svg>
